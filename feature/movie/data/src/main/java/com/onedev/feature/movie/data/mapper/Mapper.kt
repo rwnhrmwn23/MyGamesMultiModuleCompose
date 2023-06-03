@@ -5,6 +5,6 @@ import com.onedev.feature.movie.domain.model.Movie
 
 fun MovieSearchResponse.toDomainSearchMovieList(): List<Movie>? {
     return this.results?.map {
-        Movie(it.poster_path.toString())
+        Movie("https://image.tmdb.org/t/p/w500/${it.poster_path}")
     }
 }
